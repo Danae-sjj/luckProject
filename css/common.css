@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-style: normal; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 100px; }
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../fonts/iconfont.ttf");
+  src: url("../fonts/iconfont.woff"); }
+.icon {
+  font-family: "iconfont"; }
+
+body {
+  display: flex;
+  -webkit-dispaly: flex;
+  -webkit-flex-direction: column; }
+
+/*# sourceMappingURL=common.css.map */

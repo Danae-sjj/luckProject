@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+<body ng-controller="ctrl">
+<header class="header">
+    <ul>
+        <li></li>
+        <li>理财产品</li>
+        <li ng-click="showList()" id="list">
+            <i class="icon">&#xe699;</i>
+        </li>
+    </ul>
+</header>
+<section class="section">
+    <nav class="nav">
+        <ul>
+            <li class="active">债券产品</li>|
+            <li>优选基金</li>
+        </ul>
+    </nav>
+    <div class="conter" ng-repeat="item in data">
+        <div class="by">
+            <p>
+                <span>{{item.ph}}</span> | <span>{{item.phs}}</span>
+            </p>
+            <ul>
+                <li>
+                    <span>
+                        年化收益
+                    </span>
+                    <span>{{item.num}} <em>.0%</em></span>
+                </li>
+                <li>
+                    <span>期限</span><br/>
+                    <span>
+                        <em>{{item.month}}</em>
+                        <em>个月</em>
+                    </span>
+                </li>
+                <li>
+                    <span>抢购</span><br/>
+                    <span>已有 <em>{{item.qg}}</em> 人购买</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <ul>
+        <li>
+            <i class="icon">&#xe6e4;</i><br/>
+            <span>首页</span>
+        </li>
+        <li  class="active">
+            <i class="icon">&#xe947;</i><br/>
+            <span>理财产品</span>
+        </li>
+        <li>
+            <i class="icon">&#xe90e;</i><br/>
+            <span>我的账户</span>
+        </li>
+        <li>
+            <i class="icon">&#xe699;</i><br/>
+            <span>更多</span>
+        </li>
+    </ul>
+</footer>
+
+<div class="mask" ng-if="isShow">
+    <ul>
+        <li>
+            <label class="check_one">
+                <input type="checkbox"/>
+                <div class="toggle_one">
+                    <div class="small"></div>
+                </div>
+            </label>
+            全部
+        </li>
+        <li>
+            <label class="check_one">
+                <input type="checkbox"/>
+                <div class="toggle_one">
+                    <div class="small"></div>
+                </div>
+            </label>
+            押车宝
+        </li>
+        <li>
+            <label class="check_one">
+                <input type="checkbox"/>
+                <div class="toggle_one">
+                    <div class="small"></div>
+                </div>
+            </label>
+            流水宝
+        </li>
+        <li>
+            <label class="check_one">
+                <input type="checkbox"/>
+                <div class="toggle_one">
+                    <div class="small"></div>
+                </div>
+            </label>
+            黄金宝
+        </li>
+        <li>
+            <label class="check_one">
+                <input type="checkbox"/>
+                <div class="toggle_one">
+                    <div class="small"></div>
+                </div>
+            </label>
+            体验宝
+        </li>
+    </ul>
+</div>
+
+<script src="script/angular.min.js"></script>
+<script src="script/index.js"></script>
+</body>
+</html>
